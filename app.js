@@ -3,8 +3,10 @@ const schedule=[['08:30','아침'],['08:50','1교시'],['09:40','2교시'],['10:
 const seconds=t=>Number(t.slice(0,2))*3600+Number(t.slice(3))*60;
 const format=s=>[Math.floor(s/3600),Math.floor(s/60)%60,s%60].map(n=>String(n).padStart(2,'0')).join(':');
 const short=s=>`${Math.floor(s/60)}분 ${String(s%60).padStart(2,'0')}초`;
-let config={threshold:65,duration:5,amount:10,base:10},deduction=0,day='',audio,armed=false,lastSecond='',stream,context,analyser,frame,running=false,starting=false,highTime=0,lastTime=0,smoothed=0;
+let config={threshold:75,duration:5,amount:10,base:10},deduction=0,day='',audio,armed=false,lastSecond='',stream,context,analyser,frame,running=false,starting=false,highTime=0,lastTime=0,smoothed=0;
 try{const saved=JSON.parse(localStorage.getItem('classroom-settings'));if(saved)for(const key of Object.keys(config)){const v=Number(saved[key]);const limits={threshold:[10,100],duration:[1,60],amount:[1,300],base:[1,60]}[key];if(Number.isFinite(v)&&v>=limits[0]&&v<=limits[1])config[key]=v}}catch{}
+// Upgrade the previous default once; preserve teacher-customized thresholds.
+try{if(localStorage.getItem('classroom-sensitivity-version')!=='2'){if(config.threshold===65)config.threshold=75;localStorage.setItem('classroom-settings',JSON.stringify(config));localStorage.setItem('classroom-sensitivity-version','2')}}catch{}
 function persist(){try{localStorage.setItem('classroom-penalty',JSON.stringify({day,deduction}))}catch{}}
 function penalty(){deduction=Math.min(deduction,config.base*60);$('deduct').textContent=deduction+'초';$('remaining').textContent=short(config.base*60-deduction);$('ruleSummary').textContent=`높음 ${config.duration}초마다 쉬는시간 ${config.amount}초 차감`;persist()}
 for(const key of Object.keys(config)){$(key).value=config[key];$(key).addEventListener('change',()=>{if(!$(key).checkValidity()||!Number.isFinite(Number($(key).value))||!$(key).value){$(key).value=config[key];return}config[key]=Math.round(Number($(key).value));$(key).value=config[key];highTime=0;try{localStorage.setItem('classroom-settings',JSON.stringify(config))}catch{}penalty()})}

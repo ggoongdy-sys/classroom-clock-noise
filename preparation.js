@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   const style=document.createElement('style');style.textContent='.prep-banner.class-start{background:#176cc4;color:#fff;border-color:#d5edff;box-shadow:0 0 0 3px #398edf55}.class-start .warning-light{background:#a5ffcf;border-color:#e4fff0;box-shadow:0 0 16px #b9ffdb;animation:beacon 1.6s ease-in-out infinite}.class-start .text-button{color:#fff}.class-in-session .clock-panel{background:#b6dcf0;border-color:#2781c9}.class-in-session .reminder{color:#075399}#startTest{font-size:12px;margin-left:6px;padding:8px 10px}@media(prefers-reduced-motion:reduce){.class-start .warning-light{animation:none}}';document.head.append(style);
   const test=document.createElement('button');test.id='startTest';test.textContent='수업 시작 테스트';test.onclick=()=>{$('teacherDialog').close();startPreviewUntil=Date.now()+8000;void ring();tick()};$('bell').insertAdjacentElement('afterend',test);
   const dialog=$('teacherDialog');
-  ['mic','fullscreen','reset'].forEach(id=>$('teacherControls').append($(id)));
+  ['fullscreen','reset'].forEach(id=>$('teacherControls').append($(id)));
   ['bell','startTest','shushTest','previewAlert','bellStatus'].forEach(id=>$('teacherTests').append($(id)));
   const options=document.querySelector('.noise details');options.open=true;$('teacherOptions').append(options);
   $('teacherSettings').onclick=()=>dialog.showModal();

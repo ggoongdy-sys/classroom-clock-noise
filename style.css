@@ -92,3 +92,15 @@ table{font-size:25px}th{font-size:21px}
 @media(min-width:900px) and (max-height:760px){table{font-size:24px}th{font-size:20px}td,th{padding:7px 4px}.rules p{font-size:18px}.reading strong{font-size:40px}.reading{margin-top:20px}#status{font-size:20px}.penalty{font-size:21px}.penalty strong{font-size:44px}.remaining{font-size:20px}}
 
 @media(max-width:600px){main{min-width:0;width:100%;padding:8px}.panel{min-width:0;padding:22px 16px}.prep-banner{padding:12px;min-width:0}.prep-banner>div{min-width:0}.prep-banner strong{font-size:23px}.prep-banner p{font-size:16px}#teacherSettings{font-size:24px;padding:7px}#clock{font-size:clamp(40px,14vw,72px);letter-spacing:-2px}#date{font-size:20px}#countdown{font-size:clamp(36px,11vw,56px)}#nextLabel{font-size:20px}.reminder{font-size:22px}.student{max-width:100%}table{font-size:22px}.penalty strong{font-size:38px}.remaining{font-size:19px}.settings{grid-template-columns:1fr}.teacher-dialog{padding:18px}}
+
+/* Keep the microphone switch directly on the classroom board. */
+.noise-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.noise-heading #mic{font-size:19px;font-weight:800;padding:10px 16px;white-space:nowrap}
+#mic[aria-pressed="true"]{background:#075e49}
+.schedule-panel h1{font-size:34px;font-weight:900}
+.schedule-panel table{font-size:32px;font-weight:800;line-height:1.12}
+.schedule-panel th{font-size:24px}
+.schedule-panel td,.schedule-panel th{padding:10px 4px}
+@media(min-width:900px){main{grid-template-columns:1fr 1.12fr 1fr}.schedule-panel{padding:18px}.schedule-panel .rules{margin-top:auto}.schedule-panel .rules h2{margin:10px 0 6px}.schedule-panel .rules p{margin:5px 0;font-size:18px}}
+@media(min-width:900px) and (max-height:800px){.schedule-panel h1{font-size:30px;margin-bottom:10px}.schedule-panel table{font-size:29px}.schedule-panel th{font-size:22px}.schedule-panel td,.schedule-panel th{padding:7px 4px}.schedule-panel .progress{margin-bottom:10px}.schedule-panel .rules h2{font-size:22px}.schedule-panel .rules p{font-size:17px;line-height:1.25;margin:5px 0}}
+@media(max-width:600px){.schedule-panel h1{font-size:30px}.schedule-panel table{font-size:29px}.schedule-panel th{font-size:22px}.noise-heading #mic{font-size:18px}}

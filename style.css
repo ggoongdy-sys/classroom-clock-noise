@@ -7,22 +7,50 @@
 @media(min-width:900px) and (max-height:680px){main{gap:10px;padding:8px;grid-template-rows:64px minmax(0,1fr)}.prep-banner{min-height:64px;padding:8px 16px}.panel{padding:16px}#clock{margin:8px 0}.next{padding:10px 0}#countdown{margin-top:10px}.reminder{margin:10px 0}.rules p{margin:7px 0}.rules h2{margin:9px 0}.bell-area{padding-top:8px}.reading{margin-top:22px}.penalty{padding:16px 12px}.remaining{margin:12px 0}}
 @media(max-width:899px){main{grid-template-columns:1fr 1fr}.noise{grid-column:1/-1}.prep-banner{flex-wrap:wrap}.prep-banner strong{font-size:17px}.prep-banner p{font-size:12px}.prep-banner .text-button{margin-left:auto}.student{margin-bottom:0}.schedule-panel{order:0}}
 @media(max-width:600px){main{grid-template-columns:1fr}.prep-banner{gap:10px}.prep-banner>div{flex:1}.prep-banner button{font-size:11px}.noise{grid-column:auto}.prep-banner .text-button{margin-left:34px}}
-
-
-/* Classroom distance view: bold type, bright cards, strong contrast. */
-body{background:linear-gradient(135deg,#c3eaff 0%,#d1f4ec 55%,#fff0c7 100%);color:#142d4e;font-family:'Malgun Gothic',Arial,sans-serif;font-weight:600}
-.panel{background:#ffffffd9;border:3px solid #fff;box-shadow:0 6px 0 #7198b51a;border-radius:28px}
-.clock-panel{background:#e9f5ff}.schedule-panel{background:#fffdf1}.noise{background:#f1fff8}
-.prep-banner{background:#ffffffdd;border:3px solid #fff;border-radius:22px}.prep-banner strong{font-size:clamp(24px,2.5vw,40px);font-weight:900}.prep-banner p{font-size:clamp(17px,1.6vw,25px);color:inherit}.warning-light{width:36px;height:36px}
-button{border:2px solid #ffffff;border-radius:13px;box-shadow:0 3px 0 #18508b25;font-size:18px;padding:10px 14px}.prep-banner button{font-size:17px}.text-button{font-size:17px;color:#275575}.prep-banner.warning{background:#ffe394;color:#6c3700;border-color:#ffbf38}
-#date{font-size:clamp(22px,2vw,32px)}#clock{font-size:clamp(64px,6.3vw,118px);font-weight:900;letter-spacing:-3px;line-height:1.05;color:#103c73}#nextLabel{font-size:clamp(22px,2vw,32px);font-weight:800}#countdown{font-size:clamp(52px,5vw,90px);font-weight:900;line-height:1.1;color:#176ed0}.next{border-color:#bcdcf4}.reminder{font-size:clamp(22px,2vw,32px);font-weight:900;line-height:1.45}.student{border:4px solid white;box-shadow:0 4px 0 #4886ac20}
-h1,.noise-heading h2{font-size:clamp(25px,2.3vw,38px);font-weight:900}.progress span{background:#e0e7ee}.progress .done{background:#3c88e1}table{font-size:clamp(23px,2vw,33px);font-weight:800}th{font-size:clamp(20px,1.7vw,27px);color:#506078}td,th{border-bottom:2px solid #e8e4cf}.active td{background:#ffe9a1;color:#754c00}.rules h2{font-size:clamp(23px,2vw,31px)}.rules p{font-size:clamp(18px,1.5vw,25px);line-height:1.4;color:#344a63}.rules{border-color:#e8e4cf}
-#bell{font-size:18px}#startTest{font-size:18px!important;padding:9px 12px!important;margin:6px 0 0!important}#bellStatus{font-size:16px;line-height:1.35;color:#344a63}.noise-heading{gap:10px;align-items:center}.noise-heading button{font-size:19px;padding:9px 13px}#shushTest{font-size:18px!important;padding:9px 12px!important}
-.reading{display:block}.reading strong{display:block;font-size:clamp(28px,2.8vw,46px);line-height:1.35;font-weight:900;word-break:keep-all}.reading span{display:block;text-align:right;font-size:22px;margin-top:5px;color:#45605e}.meter{height:28px;background:#dcefe6;border:2px solid #cee3d7}.legend{font-size:20px;font-weight:800}.legend span:nth-child(1){color:#137153}.legend span:nth-child(2){color:#805800}.legend span:nth-child(3){color:#b63b30}#status{font-size:clamp(19px,1.65vw,28px);line-height:1.45;color:#35574c;word-break:keep-all}
-.penalty{display:block;background:#d9f3e7;border:2px solid #c2e8d5;padding:16px;border-radius:20px;font-size:clamp(21px,1.9vw,30px);text-align:center}.penalty strong{display:block;font-size:clamp(38px,3.6vw,64px);line-height:1.2;margin-top:8px;color:#126449;font-weight:900;font-variant-numeric:tabular-nums}.remaining{font-size:clamp(19px,1.6vw,27px);line-height:1.4}.remaining b{font-size:1.12em}.remaining .text-button{font-size:17px}details{font-size:19px;color:#25493b}summary{font-weight:800}.noise details[open]{background:#f1fff8;width:min(620px,94vw)}.noise details[open] summary{font-size:24px}.noise details[open] summary:after{font-size:17px}.settings{gap:18px}.settings input{font-size:22px;background:white;border-color:#a3c8b6}.high .noise{background:#fff1e9;border-color:#ffb89c}.high .penalty{background:#ffdac7;border-color:#ffb89c}.high #level{color:#b63823}
-@media(min-width:900px){main{grid-template-columns:1.04fr 1fr 1.06fr;grid-template-rows:100px minmax(0,1fr);gap:14px;padding:12px;min-height:700px}.panel{padding:18px}.prep-banner{min-height:100px;padding:12px 20px}.clock-panel{justify-content:space-evenly}#clock{margin:12px 0}.next{padding:14px 0}#countdown{margin-top:16px}.reminder{margin:14px 0}.student{width:clamp(110px,18vh,200px);height:clamp(110px,18vh,200px)}.progress{margin-bottom:12px}.progress span{height:16px}h1{margin-bottom:12px}td,th{padding:clamp(5px,.8vh,12px) 4px}.rules{margin-top:auto;padding:0}.rules h2{margin:12px 0 8px}.rules p{margin:6px 0}.bell-area{padding-top:10px}#bellStatus{margin:7px 0 0}.reading{margin:18px 0 10px}.legend{margin:10px 0}#status{margin:12px 0;min-height:58px}.penalty{margin-top:auto}.remaining{margin:12px 0}.noise details{margin-top:5px;padding-top:10px}}
-@media(min-width:900px) and (max-height:800px){main{grid-template-rows:88px minmax(0,1fr);gap:10px;padding:8px;min-height:680px}.prep-banner{min-height:88px;padding:8px 16px}.panel{padding:14px}.prep-banner strong{font-size:28px}.prep-banner p{font-size:18px}#date{font-size:23px}h1,.noise-heading h2{font-size:26px}table{font-size:25px}th{font-size:21px}td,th{padding:5px 3px}.rules h2{font-size:23px;margin:8px 0 5px}.rules p{font-size:18px;margin:4px 0}.bell-area{padding-top:6px}#bell,#startTest{font-size:16px!important;padding:7px 9px!important}#bellStatus{font-size:15px}.reading{margin-top:12px}.reading strong{font-size:30px}.reading span{font-size:20px}.legend{font-size:18px;margin:8px 0}#status{font-size:20px;min-height:54px;margin:10px 0}.penalty{padding:12px;font-size:23px}.penalty strong{font-size:42px}.remaining{font-size:20px;margin:10px 0}.noise details{font-size:18px}}
-@media(max-width:899px){main{height:auto;gap:14px}.panel{padding:24px}.prep-banner{gap:12px}.prep-banner strong{font-size:26px}.prep-banner p{font-size:19px}.prep-banner button{font-size:17px}.noise-heading h2{font-size:28px}.rules p{font-size:20px}#bellStatus{font-size:17px}.student{width:180px;height:180px}.student img{width:409.1667%;height:360.8333%;left:-52.5%;top:-207.9167%}.reading strong{font-size:34px}#status{font-size:22px}.penalty strong{font-size:48px}.remaining{font-size:22px}}
-
-
-@media(min-width:900px) and (max-height:800px){.schedule-panel{padding:12px}table{font-size:24px;line-height:1.08}th{font-size:20px}td,th{padding:3px 2px}.rules h2{font-size:22px;margin:7px 0 4px}.rules p{font-size:18px;line-height:1.2;margin:4px 0}.bell-area{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4px;padding-top:6px}#bell,#startTest{font-size:14px!important;padding:7px 8px!important;margin:0!important}#bellStatus{width:100%;font-size:14px;margin:3px 0 0}.schedule-panel h1{line-height:1.15;margin-bottom:8px}.schedule-panel .progress{margin-bottom:8px}}
+/* Keep the original blue glass design; improve only type and spacing. */
+body{font-family:Arial,'Malgun Gothic',sans-serif}
+.prep-banner strong{font-size:26px}.prep-banner p{font-size:17px}
+.prep-banner button{font-size:15px}
+#date{font-size:23px}
+#clock{font-weight:750}
+#nextLabel{font-size:22px}
+.reminder{font-size:24px}
+h1{font-size:28px}
+table{font-size:22px}th{font-size:18px}
+.rules h2{font-size:23px}.rules p{font-size:17px}
+.noise-heading h2{font-size:24px}.noise-heading button{font-size:16px}
+.reading strong{font-size:28px;line-height:1.3}.reading span{font-size:17px}
+.legend{font-size:16px}
+#status{font-size:18px;line-height:1.5}
+.penalty{font-size:19px;gap:12px;flex-wrap:wrap}
+.penalty strong{font-size:34px;white-space:nowrap}
+.remaining{font-size:17px}.text-button{font-size:15px}
+details{font-size:16px}#bellStatus{font-size:14px}
+#shushTest{font-size:15px!important}#startTest{font-size:15px!important}
+.noise details[open] summary{font-size:20px}
+@media(min-width:900px){
+ main{grid-template-rows:88px minmax(0,1fr);min-height:650px}
+ .prep-banner{min-height:88px}
+ .panel{padding:20px}
+ #clock{font-size:clamp(58px,6.2vw,98px);line-height:1.1}
+ #countdown{font-size:clamp(46px,4.8vw,72px)}
+ .student{width:clamp(120px,20vh,200px);height:clamp(120px,20vh,200px)}
+ td,th{padding:7px 4px;line-height:1.2}
+ .rules h2{margin:12px 0 8px}.rules p{margin:7px 0}
+ .bell-area{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;padding-top:10px}
+ #bell{font-size:15px;padding:8px 10px}
+ #startTest{margin:0!important;padding:8px 10px!important}
+ #bellStatus{width:100%;margin:3px 0 0}
+ .reading{margin-top:26px;flex-wrap:wrap;gap:8px}
+ .penalty{padding:16px 12px}
+}
+@media(min-width:900px) and (max-height:760px){
+ main{grid-template-rows:78px minmax(0,1fr);padding:8px;gap:10px}
+ .prep-banner{min-height:78px;padding:8px 16px}.prep-banner strong{font-size:24px}
+ .panel{padding:14px}#date{font-size:21px}h1{font-size:26px}
+ td,th{padding:5px 4px}
+ .rules h2{font-size:21px;margin:8px 0 5px}.rules p{margin:5px 0;font-size:16px}
+ .reading{margin:18px 0 10px}.reading strong{font-size:26px}
+ #status{font-size:17px;min-height:48px}.remaining{margin:12px 0}
+ .noise-heading h2{font-size:22px}
+}

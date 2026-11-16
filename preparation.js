@@ -32,8 +32,15 @@ function updatePreparation(now){
 }
 document.addEventListener('DOMContentLoaded',()=>{
   const style=document.createElement('style');style.textContent='.prep-banner.class-start{background:#176cc4;color:#fff;border-color:#d5edff;box-shadow:0 0 0 3px #398edf55}.class-start .warning-light{background:#a5ffcf;border-color:#e4fff0;box-shadow:0 0 16px #b9ffdb;animation:beacon 1.6s ease-in-out infinite}.class-start .text-button{color:#fff}.class-in-session .clock-panel{background:#b6dcf0;border-color:#2781c9}.class-in-session .reminder{color:#075399}#startTest{font-size:12px;margin-left:6px;padding:8px 10px}@media(prefers-reduced-motion:reduce){.class-start .warning-light{animation:none}}';document.head.append(style);
-  const test=document.createElement('button');test.id='startTest';test.textContent='수업 시작 테스트';test.onclick=()=>{startPreviewUntil=Date.now()+8000;void ring();tick()};$('bell').insertAdjacentElement('afterend',test);
-  $('previewAlert').onclick=()=>{previewUntil=Date.now()+8000;tick()};
+  const test=document.createElement('button');test.id='startTest';test.textContent='수업 시작 테스트';test.onclick=()=>{$('teacherDialog').close();startPreviewUntil=Date.now()+8000;void ring();tick()};$('bell').insertAdjacentElement('afterend',test);
+  const dialog=$('teacherDialog');
+  ['mic','fullscreen','reset'].forEach(id=>$('teacherControls').append($(id)));
+  ['bell','startTest','shushTest','previewAlert','bellStatus'].forEach(id=>$('teacherTests').append($(id)));
+  const options=document.querySelector('.noise details');options.open=true;$('teacherOptions').append(options);
+  $('teacherSettings').onclick=()=>dialog.showModal();
+  $('closeSettings').onclick=()=>dialog.close();
+  dialog.addEventListener('click',event=>{if(event.target===dialog){const rect=dialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)dialog.close();}});
+  $('previewAlert').onclick=()=>{dialog.close();previewUntil=Date.now()+8000;tick()};
   $('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen()}catch{$('prepText').textContent='전체화면을 지원하지 않는 환경입니다. 브라우저에서 F11을 눌러 주세요.'}};
   document.addEventListener('fullscreenchange',()=>{$('fullscreen').textContent=document.fullscreenElement?'전체화면 종료':'전체화면'});
 });

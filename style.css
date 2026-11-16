@@ -54,3 +54,39 @@ details{font-size:16px}#bellStatus{font-size:14px}
  #status{font-size:17px;min-height:48px}.remaining{margin:12px 0}
  .noise-heading h2{font-size:22px}
 }
+
+/* Readable classroom view; teacher controls live in one dialog. */
+body{color:#071b27}
+#date,#nextLabel,.reminder,h1,.noise-heading h2,table,.rules h2{font-weight:800}
+#clock{color:#000;font-weight:800}
+#countdown{color:#0755a4}
+.prep-banner strong{font-weight:800}
+.prep-banner p{font-weight:700;color:inherit}
+#teacherSettings{margin-left:auto;flex-shrink:0;font-size:28px;line-height:1;background:transparent;color:#062a43;border:1px solid #427b9260;box-shadow:none;padding:10px;border-radius:10px}
+.class-start #teacherSettings{background:#ffffffd9}
+.bell-area:empty{display:none}
+.noise-heading{display:block}
+.reading{display:block;margin:24px 0 14px}
+.reading strong{display:block;font-size:clamp(38px,4vw,62px);font-weight:900;line-height:1.15;color:#082d3b}
+.reading span{display:block;text-align:right;font-size:22px;font-weight:700;color:#173e4d;margin-top:8px}
+.meter{height:24px}
+.legend{font-size:19px;font-weight:800}
+.legend span:nth-child(1){color:#06583e}.legend span:nth-child(2){color:#684600}.legend span:nth-child(3){color:#9b231d}
+#status{font-size:22px;font-weight:700;color:#102f3c;line-height:1.45}
+.penalty{display:block;text-align:center;font-size:22px;font-weight:800;padding:18px 12px;background:#ffffff55}
+.penalty strong{display:block;font-size:clamp(42px,4vw,64px);font-weight:900;color:#084a89;margin-top:10px;line-height:1.2}
+.remaining{font-size:21px;font-weight:700;color:#102f3c;justify-content:center}
+.rules p{font-size:20px;font-weight:700;color:#102f3c}
+table{font-size:25px}th{font-size:21px}
+.teacher-dialog{width:min(650px,94vw);max-height:88dvh;overflow:auto;border:1px solid #7cb2c7;border-radius:20px;background:#e2f3f8;color:#0b293c;padding:24px;box-shadow:0 20px 90px #002c4760}
+.teacher-dialog::backdrop{background:#08283866}
+.teacher-dialog header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.teacher-dialog h2{font-size:25px;margin:0}.teacher-dialog h3{font-size:20px;margin:24px 0 12px}
+.teacher-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.teacher-dialog button,.teacher-dialog #bell,.teacher-dialog #startTest,.teacher-dialog #shushTest,.teacher-dialog .text-button{font-size:17px!important;padding:10px 14px!important;margin:0!important;background:#1168b4;color:#fff;border:1px solid #fff;border-radius:9px;text-decoration:none}
+.teacher-dialog #bellStatus{width:100%;font-size:16px;color:#244653}
+.teacher-dialog details{border-top:1px solid #abcfdc;margin-top:20px;padding-top:6px;font-size:17px}
+.teacher-dialog summary{display:none}.teacher-dialog details p{line-height:1.5}
+.teacher-dialog input{background:#fff;font-size:20px;color:#0b293c}
+@media(min-width:900px){.rules{margin-top:auto;margin-bottom:8px}td,th{padding:9px 4px}.noise #status{min-height:62px}.penalty{margin-top:auto}.remaining{margin:18px 0 2px}.student{width:clamp(100px,18vh,180px);height:clamp(100px,18vh,180px)}}
+@media(min-width:900px) and (max-height:760px){table{font-size:24px}th{font-size:20px}td,th{padding:7px 4px}.rules p{font-size:18px}.reading strong{font-size:40px}.reading{margin-top:20px}#status{font-size:20px}.penalty{font-size:21px}.penalty strong{font-size:44px}.remaining{font-size:20px}}
